@@ -7,10 +7,12 @@ public class ex3 {
         System.out.println("Enter amount");
         int hryvna = sc.nextInt();
         int amount = ((int)(hryvna/currency));
-        double rest = hryvna/currency - amount;
+        double rest = hryvna - currency*amount;
         System.out.println("You can buy " + amount);
+        if (rest != 0) {
         System.out.printf("You rest is %.2f", rest);
         System.out.println();
-
+        } else { System.out.println("You don't have a rest");
+                }   
     }   
 }
